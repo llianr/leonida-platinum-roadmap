@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Platinum Roadmap — GTA VI Trophy Guide &amp; Tracker</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="masthead">
+  <div class="masthead-text">
+    <p class="kicker">Grand Theft Auto VI · PlayStation 5 · 55 trophies</p>
+    <h1>Leonida Platinum Roadmap</h1>
+    <p class="lede">Every official trophy with its own guide and source, a checklist that saves in your browser, and a roadmap to the platinum — built from the official trophy list. Works offline; nothing leaves this page.</p>
+  </div>
+  <div class="progress-card" id="progressCard">
+    <p class="progress-big"><span id="earnedCount">0</span><span class="of"> / 55 earned</span></p>
+    <div class="bar" role="progressbar" aria-label="Trophies earned"><div class="bar-fill" id="barFill"></div></div>
+    <p class="progress-pct" id="progressPct">0% to the platinum</p>
+    <p class="next-up" id="nextUp"></p>
+    <ul class="tier-counts" id="tierCounts"></ul>
+  </div>
+</header>
+
+<section class="roadmap" aria-label="Roadmap to the platinum">
+  <h2>Roadmap to the platinum</h2>
+  <p class="roadmap-note">Seven stages, in order, built only from the official trophy descriptions. Click a stage to see its trophies.</p>
+  <ol class="stages" id="stages"></ol>
+</section>
+
+<section class="toolbar" aria-label="Filters and tools">
+  <div class="toolbar-row">
+    <label class="search">Search <input id="search" type="search" placeholder="Trophy name or mission…" autocomplete="off"></label>
+    <label class="spoiler-toggle"><input id="spoiler" type="checkbox" checked> Spoiler mode — hide story trophies until earned</label>
+  </div>
+  <div class="toolbar-row">
+    <div class="filter-group" id="tierFilters" role="group" aria-label="Filter by grade"></div>
+    <div class="filter-group" id="kindFilters" role="group" aria-label="Filter by kind"></div>
+    <div class="filter-group" id="earnedFilters" role="group" aria-label="Show earned or remaining"></div>
+  </div>
+  <div class="toolbar-row">
+    <button id="exportBtn" type="button">Export progress</button>
+    <label class="import-btn">Import progress <input id="importFile" type="file" accept="application/json,.json"></label>
+    <button id="resetBtn" type="button">Reset progress</button>
+    <p class="list-count" id="listCount"></p>
+  </div>
+</section>
+
+<main class="layout">
+  <section class="list-col" aria-label="Trophy checklist">
+    <h2 id="listHeading">Checklist</h2>
+    <ul class="trophy-list" id="trophyList"></ul>
+    <p class="empty" id="emptyMsg" hidden>No trophies match these filters.</p>
+  </section>
+  <aside class="detail-col" aria-label="Selected trophy">
+    <div class="detail" id="detail"></div>
+    <div class="missable-box" id="missableBox"></div>
+  </aside>
+</main>
+
+<footer>
+  <p><strong>Sources.</strong> Trophy names, descriptions and grades are the official PlayStation list, as listed by the Exophase trophy list and the PSNProfiles trophy list for Grand Theft Auto VI. Every guide is written for this page, in its own words, and names its source beside it. The game released 19 November 2026: where a guide says a detail comes from the official description alone, that is all it claims — no location or step is invented.</p>
+  <p><strong>How this page works.</strong> Progress is saved in your browser (localStorage) under one key and never sent anywhere. Export downloads your progress as JSON; import reads that file back. Spoiler mode hides the names and descriptions of story trophies until you earn them. Missable flags mean the trophy is tied to a one-time story moment or a specific condition — check the guide before you pass it.</p>
+</footer>
+<script type="module" src="app.js"></script>
+</body>
+</html>
